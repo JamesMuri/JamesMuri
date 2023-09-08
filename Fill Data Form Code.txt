@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Survey Form</title>
+</head>
+<body>
+    <h1>User Survey</h1>
+    <p>Please take a moment to fill out our survey.</p>
+
+    <form action="submit_survey.php" method="post">
+        <!-- Name Input -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <!-- Gender Radio Buttons -->
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br><br>
+
+        <!-- Age Dropdown -->
+        <label for="age">Age:</label>
+        <select id="age" name="age">
+            <option value="under18">Under 18</option>
+            <option value="18-30">18-30</option>
+            <option value="31-50">31-50</option>
+            <option value="over50">Over 50</option>
+        </select><br><br>
+
+        <!-- Checkboxes for Interests -->
+        <label>Interests:</label><br>
+        <input type="checkbox" id="music" name="interests[]" value="music">
+        <label for="music">Music</label><br>
+        <input type="checkbox" id="movies" name="interests[]" value="movies">
+        <label for="movies">Movies</label><br>
+        <input type="checkbox" id="sports" name="interests[]" value="sports">
+        <label for="sports">Sports</label><br><br>
+
+        <!-- Comments Text Area -->
+        <label for="comments">Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
